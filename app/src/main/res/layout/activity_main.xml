@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Tips Calculator"
+        android:text="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Preencha os campos abaixo para realizar o calculo da sua conta."
+        android:text="@string/main_subtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32sp"
-        android:text="Digite o valor da conta:"
+        android:text="@string/table_amount_label"
         app:layout_constraintStart_toStartOf="@+id/tv_subtitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
 
@@ -52,7 +52,7 @@
             android:id="@+id/tie_total"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Ex: R$ 98,99"
+            android:hint="@string/table_amount_hint"
             android:inputType="numberDecimal"
             android:paddingStart="0dp"
             android:textSize="24sp"
@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Digite a quantidade de pessoas na mesa:"
+        android:text="@string/people_table_label"
         app:layout_constraintEnd_toEndOf="@+id/til_total"
         app:layout_constraintStart_toStartOf="@+id/til_total"
         app:layout_constraintTop_toBottomOf="@+id/til_total" />
@@ -74,20 +74,56 @@
         android:id="@+id/til_num_people_table"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="@+id/tv_subtitle"
-        app:layout_constraintStart_toStartOf="@+id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/tv_num_people_label"
         app:layout_constraintTop_toBottomOf="@+id/tv_num_people_label">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/til_num_people"
+            android:id="@+id/tie_num_people"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/people_hint"
+            android:inputType="number"
+            android:maxLength="2"
             android:paddingStart="0dp"
-            android:text="Ex: 5" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/percentage_label"
+        app:layout_constraintStart_toStartOf="@+id/til_num_people_table"
+        app:layout_constraintTop_toBottomOf="@+id/til_num_people_table" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_percentage_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/til_num_people_table"
+        app:layout_constraintStart_toStartOf="@+id/tv_percentage"
+        app:layout_constraintTop_toBottomOf="@+id/tv_percentage">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_percentage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/percentage_hint"
+            android:inputType="number"
+            android:maxLength="3"
+            android:paddingStart="0dp"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,12 +132,12 @@
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="4dp"
-        android:text="limpar"
+        android:text="@string/clean"
         app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
-        app:layout_constraintStart_toStartOf="@+id/sp_number_of_people"
-        app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
+        app:layout_constraintStart_toStartOf="@+id/til_percentage_label"
+        app:layout_constraintTop_toBottomOf="@+id/til_percentage_label" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_guideline"
@@ -115,10 +151,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:text="calcular"
-        app:layout_constraintEnd_toEndOf="@+id/sp_number_of_people"
+        android:layout_marginTop="24dp"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="@+id/til_percentage_label"
         app:layout_constraintStart_toEndOf="@+id/vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
+        app:layout_constraintTop_toBottomOf="@+id/til_percentage_label" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

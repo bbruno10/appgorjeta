@@ -23,7 +23,7 @@ class SummaryActivity : AppCompatActivity() {
         val percentage = intent.getIntExtra("percentage", 0)
         val totalAmount = intent.getFloatExtra("totalAmount", 0.0f)
 
-        binding.tvPercentage.text = percentage.toString()
+        binding.tvPercentage.text = percentage.toString() + "%"
         binding.tvTotal.text = totalAmount.toString()
         binding.tvTotalTable.text = totalTable.toString()
         binding.tvNumPeople.text = numPeople.toString()
@@ -31,11 +31,5 @@ class SummaryActivity : AppCompatActivity() {
         binding.btnRefresh.setOnClickListener {
             finish()
         }
-
-        println("Bruno1 " + totalAmount)
-
-
-
-
     }
 }

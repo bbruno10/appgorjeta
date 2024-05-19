@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Summary"
+        android:text="@string/summary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Veja abaixo o resultado da sua conta"
+        android:text="@string/summary_subtitle"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="total table"
+        android:text="@string/total_table"
         app:layout_constraintStart_toStartOf="@+id/tv_subtitle"
         app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
 
@@ -43,14 +43,14 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_total_table_label"
-        tools:text="R$ 250,00" />
+        tools:text="250,00" />
 
     <TextView
         android:id="@+id/tv_num_people_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="num of people:"
+        android:text="@string/num_of_people"
         app:layout_constraintStart_toStartOf="@+id/tv_total_table_label"
         app:layout_constraintTop_toBottomOf="@+id/tv_total_table_label" />
 
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32sp"
-        android:text="percentage"
+        android:text="@string/percentage"
         app:layout_constraintStart_toStartOf="@+id/tv_num_people_label"
         app:layout_constraintTop_toBottomOf="@+id/tv_num_people_label" />
 
@@ -112,14 +112,14 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/tv_percentage"
         app:layout_constraintTop_toBottomOf="@+id/separator"
-        tools:text="R$ 60,59" />
+        tools:text="60,59" />
 
     <Button
         android:id="@+id/btn_refresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:text="Refresh"
+        android:text="@string/refresh"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
